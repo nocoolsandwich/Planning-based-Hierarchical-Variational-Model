@@ -138,7 +138,7 @@ def train(model_name, restore=True):
 def get_args():
 	parser = argparse.ArgumentParser()
 	parser.register("type", "bool", lambda x : x.lower() == 'true')
-	parser.add_argument("--cuda_visible_devices", type=str, default='0,1,2,3')
+	parser.add_argument("--cuda_visible_devices", type=str, default='0')
 	parser.add_argument("--train", type="bool", default=True)
 	parser.add_argument("--restore", type="bool", default=False)
 	parser.add_argument("--model_name", type=str, default="PHVM")
