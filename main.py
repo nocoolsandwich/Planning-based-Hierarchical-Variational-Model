@@ -126,7 +126,7 @@ def train(model_name, restore=True):
 					  type_vocab_size=len(dataset.vocab.id2type))
 	init = {'epoch': 0, 'worse_step': 0}
 	if restore:
-		print(config.checkpoint_dir , + model_name ,config.best_model_dir)
+		print(config.checkpoint_dir , model_name ,config.best_model_dir)
 		init['epoch'], init['worse_step'], model = model_utils.restore_model(model,
 											config.checkpoint_dir + "/" + model_name + config.tmp_model_dir,
 											config.checkpoint_dir + "/" + model_name + config.best_model_dir)
